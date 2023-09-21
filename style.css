@@ -1,0 +1,172 @@
+/**
+* You can edit this whole file.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/** 
+* Variables 
+*/
+
+:root {
+  --gray-0: #000000;
+  --gray-1: #222222;
+  --gray-2: #dddddd;
+  --gray-3: #fbfbfb;
+  --gray-4: #ffffff;
+  --primary: #8a2be2;
+  --secondary: #20d397;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1rem;
+  --font-weight-thin: 300;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 800;
+  --spacer-1: .25rem;
+  --spacer-2: .5rem;
+  --spacer-3: 1rem;
+  --spacer-4: 1.5rem;
+  --spacer-5: 2rem;
+  --shadows: 7px 7px 7px rgba(0, 0, 0, .15);
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+/**
+* estilos comunes 
+*/
+
+.menu-navegacion {
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--gray-4);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2);
+}
+
+.img-dog {
+  height: 30px;
+  padding: 0 10px 0 0;
+}
+
+.dog-leg {
+  height: 10px;
+  margin: 0 8px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 0 6px 2px;
+  
+}
+
+li:active {
+  border-bottom: 2px solid var(--gray-4);
+}
+
+a {
+  color: var(--gray-4);
+  font-size: var(--font-size-3);
+  text-decoration: none;
+}
+
+h2 {
+  font-size: var(--font-size-3);
+  color: var(--gray-1);
+  font-weight: var(--font-weight-heavy);
+  margin: var(--spacer-2);
+}
+
+span {
+  font-size: var(--font-size-3);
+  margin-right: auto;
+}
+
+p {
+  font-size: clamp(var(--font-size-3), 2vw, var(--font-size-2));
+  margin: var(--spacer-2);
+  font-weight: var(--font-weight-thin);
+}
+
+p + p {
+  margin: var(--spacer-2) var(--spacer-2) 34px;
+}
+
+.content-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  margin: 35px 0;
+  font-size: var(--font-size-1);
+}
+
+.card-content {
+  border: 1px solid var(--gray-2);
+  border-radius: 3px;
+  box-shadow: var(--shadows);
+  padding: 14px 7px 4px;
+  width: 100%;
+  min-width: 250px;
+  min-height: auto;
+  display: flex;
+  margin: 0 auto 20px;
+  flex-direction: column;
+}
+
+.button {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 5px;
+  margin: auto var(--spacer-2) var(--spacer-2);
+}
+
+/** 
+* estilos Tablet-Mobile 
+*/
+
+@media (min-width: 840px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    justify-content: flex-start;
+  }
+} 
+
+/**
+* estilos descktop
+*/
+
+@media (min-width: 1240px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
+
